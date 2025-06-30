@@ -1,0 +1,60 @@
+.
+├── Dockerfile
+├── KraftVeb
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── static
+│   ├── templates
+│   ├── urls.py
+│   ├── views.py
+│   └── wsgi.py
+├── contacts
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   ├── models.py
+│   ├── serializers.py
+│   ├── signals.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── db.sqlite3
+├── docker-compose.yml
+├── kraftveb-frontend
+│   ├── README.md
+│   ├── dist
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   ├── src
+│   ├── tailwind.config.js
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   ├── tsconfig.tsbuildinfo
+│   └── vite.config.ts
+├── manage.py
+├── node_modules
+│   ├── framer-motion
+│   ├── motion-dom
+│   ├── motion-utils
+│   └── tslib
+├── package-lock.json
+├── package.json
+├── render.yaml
+├── requirements.txt
+├── static
+│   ├── assets
+│   └── logo.jpg
+├── structure.txt
+└── templates
+
+21 directories, 37 files

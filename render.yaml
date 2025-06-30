@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: kraftveb-app
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      npm install --prefix kraftveb-frontend
+      npm run build --prefix kraftveb-frontend
+    startCommand: gunicorn KraftVeb.wsgi
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: KraftVeb.settings
+      - key: PYTHON_VERSION
+        value: 3.11

@@ -1,0 +1,29 @@
+@keyframes unfold {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Базовый класс контейнера, который будет запускать анимацию */
+#portfolio-cards .card {
+  transform-origin: center center;
+  /* стартовое состояние */
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* Когда мы добавим класс .animate-unfold — все карточки анимируются */
+#portfolio-cards.animate-unfold .card {
+  animation: unfold 0.5s ease-out forwards;
+}
+
+/* Небольшая задержка для каждой карточки */
+#portfolio-cards.animate-unfold .card:nth-child(1) { animation-delay: 0.1s; }
+#portfolio-cards.animate-unfold .card:nth-child(2) { animation-delay: 0.2s; }
+#portfolio-cards.animate-unfold .card:nth-child(3) { animation-delay: 0.3s; }
+/* и так далее для остальных карточек */
