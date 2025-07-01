@@ -14,3 +14,13 @@ def create_contact(request):
 
     Contact.objects.create(name=name, email=email, message=message)
     return Response({'message': 'Контакт успешно создан'}, status=status.HTTP_201_CREATED)
+
+
+from django.core.management import call_command
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+
+@api_view(["GET"])
+def run_migrations(request):
+    call_command("migrate", interactive=False)
+    return Response({"status": "migrations applied"})
