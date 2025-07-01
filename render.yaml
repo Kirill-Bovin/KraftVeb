@@ -6,6 +6,9 @@ services:
       pip install -r requirements.txt
       npm install --prefix kraftveb-frontend
       npm run build --prefix kraftveb-frontend
+      python manage.py collectstatic --noinput
+      python manage.py makemigrations --noinput
+      python manage.py migrate --noinput
     startCommand: gunicorn KraftVeb.wsgi:application --bind 0.0.0.0:10000
     envVars:
       - key: DJANGO_SETTINGS_MODULE
